@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel by Gohar</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#f8fafc;
+      color:#1e293b;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* Header */
+
+    header{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(0,0,0,0.05);
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+    }
+
+    .logo{
+      font-size:1.5rem;
+      font-weight:700;
+      color:#0f172a;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+    }
+
+    .nav-links a{
+      color:#334155;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:#0ea5e9;
+    }
+
+    /* Hero */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      background:
+      linear-gradient(rgba(15,23,42,0.65), rgba(15,23,42,0.65)),
+      url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      color:white;
+      text-align:center;
+      padding:120px 20px 80px;
+    }
+
+    .hero-content{
+      max-width:800px;
+      margin:auto;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      line-height:1.1;
+      margin-bottom:24px;
+      font-weight:700;
+    }
+
+    .hero p{
+      font-size:1.2rem;
+      color:#e2e8f0;
+      margin-bottom:40px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 34px;
+      background:#0ea5e9;
+      color:white;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 10px 25px rgba(14,165,233,0.3);
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      background:#0284c7;
+      box-shadow:0 15px 35px rgba(14,165,233,0.4);
+    }
+
+    /* Sections */
+
+    section{
+      padding:100px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:2.5rem;
+      margin-bottom:15px;
+      color:#0f172a;
+    }
+
+    .section-title p{
+      color:#64748b;
+      max-width:700px;
+      margin:auto;
+    }
+
+    /* About */
+
+    .about{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:60px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:24px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .about-text h3{
+      font-size:2rem;
+      margin-bottom:20px;
+      color:#0f172a;
+    }
+
+    .about-text p{
+      color:#475569;
+      margin-bottom:18px;
+    }
+
+    /* Features */
+
+    .features-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .feature-card{
+      background:white;
+      padding:35px;
+      border-radius:22px;
+      transition:0.35s;
+      box-shadow:0 10px 30px rgba(0,0,0,0.05);
+      border:1px solid rgba(0,0,0,0.04);
+    }
+
+    .feature-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .feature-icon{
+      font-size:2rem;
+      margin-bottom:20px;
+    }
+
+    .feature-card h3{
+      margin-bottom:15px;
+      color:#0f172a;
+    }
+
+    .feature-card p{
+      color:#64748b;
+    }
+
+    /* CTA */
+
+    .cta{
+      background:linear-gradient(135deg,#0ea5e9,#2563eb);
+      color:white;
+      border-radius:32px;
+      text-align:center;
+      padding:70px 30px;
+    }
+
+    .cta h2{
+      font-size:2.5rem;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      max-width:700px;
+      margin:auto auto 35px;
+      color:#e2e8f0;
+    }
+
+    .cta .btn{
+      background:white;
+      color:#0f172a;
+      box-shadow:none;
+    }
+
+    .cta .btn:hover{
+      background:#f1f5f9;
+    }
+
+    /* Contact */
+
+    .contact-box{
+      background:white;
+      padding:50px;
+      border-radius:28px;
+      box-shadow:0 15px 35px rgba(0,0,0,0.06);
+      text-align:center;
+      max-width:700px;
+      margin:auto;
+    }
+
+    .contact-box h3{
+      font-size:2rem;
+      margin-bottom:20px;
+    }
+
+    .contact-info{
+      margin-top:25px;
+    }
+
+    .contact-info p{
+      margin:12px 0;
+      color:#475569;
+      font-size:1.05rem;
+    }
+
+    .contact-info a{
+      color:#0ea5e9;
+      font-weight:600;
+    }
+
+    /* Footer */
+
+    footer{
+      padding:30px 0;
+      text-align:center;
+      color:#64748b;
+      font-size:0.95rem;
+    }
+
+    /* Responsive */
+
+    @media(max-width:900px){
+
+      .hero h1{
+        font-size:2.8rem;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .nav-links{
+        gap:16px;
+      }
+    }
+
+    @media(max-width:600px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      .hero h1{
+        font-size:2.2rem;
+      }
+
+      .hero p{
+        font-size:1rem;
+      }
+
+      .section-title h2{
+        font-size:2rem;
+      }
+
+      .contact-box{
+        padding:35px 25px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Travel by Gohar</div>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#features">Why Us</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover Armenia’s Hidden Jewels</h1>
+
+      <p>
+        Luxury tours, breathtaking landscapes, authentic Armenian culture,
+        and unforgettable travel experiences designed personally for you.
+      </p>
+
+      <a href="#contact" class="btn">Book Your Journey</a>
+    </div>
+  </section>
+
+  <!-- About -->
+
+  <section id="about">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>About Us</h2>
+
+        <p>
+          Travel by Gohar creates elegant and personalized travel experiences
+          across Armenia with comfort, authenticity, and warm hospitality.
+        </p>
+      </div>
+
+      <div class="about">
+
+        <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=1200&auto=format&fit=crop" alt="Armenia Travel">
+
+        <div class="about-text">
+          <h3>Experience Armenia Like Never Before</h3>
+
+          <p>
+            From ancient monasteries and mountain landscapes to luxury experiences
+            and cultural discoveries, every journey is carefully designed with
+            attention to detail.
+          </p>
+
+          <p>
+            We offer private tours, chauffeur services, adventure experiences,
+            and unforgettable moments for travelers seeking beauty, comfort,
+            and authenticity.
+          </p>
+
+          <a href="#contact" class="btn">Contact Us</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features -->
+
+  <section id="features">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Why Choose Us</h2>
+
+        <p>
+          We combine luxury, local expertise, and authentic experiences
+          to create memorable journeys across Armenia.
+        </p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3>Personalized Tours</h3>
+          <p>
+            Custom travel experiences designed around your interests,
+            schedule, and travel style.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🚘</div>
+          <h3>Comfortable Transport</h3>
+          <p>
+            Modern vehicles, private drivers, and premium chauffeur services
+            for stress-free travel.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏔️</div>
+          <h3>Beautiful Destinations</h3>
+          <p>
+            Explore mountains, lakes, monasteries, forests, and cultural
+            landmarks throughout Armenia.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⭐</div>
+          <h3>Authentic Hospitality</h3>
+          <p>
+            Experience genuine Armenian warmth, local traditions,
+            and unforgettable cultural moments.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+
+  <section>
+    <div class="container">
+      <div class="cta">
+
+        <h2>Your Armenian Adventure Starts Here</h2>
+
+        <p>
+          Discover culture, nature, luxury, and unforgettable memories
+          with Travel by Gohar.
+        </p>
+
+        <a href="https://wa.me/37498488858" class="btn">
+          Contact on WhatsApp
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+
+  <section id="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact Us</h2>
+
+        <p>
+          Ready to explore Armenia? Get in touch and let’s plan your perfect trip.
+        </p>
+      </div>
+
+      <div class="contact-box">
+
+        <h3>Travel by Gohar</h3>
+
+        <div class="contact-info">
+          <p>📍 Armenia</p>
+
+          <p>
+            📞 WhatsApp:
+            <a href="https://wa.me/37498488858">
+              +374 98 488858
+            </a>
+          </p>
+
+          <p>
+            📧 Email:
+            <a href="mailto:gohararmeniatours@gmail.com">
+              gohararmeniatours@gmail.com
+            </a>
+          </p>
+
+          <p>
+            🌍 Personalized Tours • Chauffeur Services • VIP Experiences
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="container">
+      © 2026 Travel by Gohar. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
