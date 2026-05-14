@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -24,8 +25,13 @@
     body{
       font-family:'Poppins', sans-serif;
       background:#f8fafc;
-      color:#1e293b;
-      line-height:1.6;
+      color:#0f172a;
+      line-height:1.7;
+    }
+
+    img{
+      width:100%;
+      display:block;
     }
 
     a{
@@ -38,7 +44,11 @@
       margin:auto;
     }
 
-    /* Header */
+    section{
+      padding:100px 0;
+    }
+
+    /* HEADER */
 
     header{
       position:fixed;
@@ -46,7 +56,7 @@
       top:0;
       z-index:1000;
       background:rgba(255,255,255,0.92);
-      backdrop-filter:blur(10px);
+      backdrop-filter:blur(12px);
       border-bottom:1px solid rgba(0,0,0,0.05);
     }
 
@@ -58,14 +68,24 @@
     }
 
     .logo{
-      font-size:1.5rem;
+      display:flex;
+      align-items:center;
+      gap:14px;
       font-weight:700;
+      font-size:1.2rem;
       color:#0f172a;
+    }
+
+    .logo img{
+      width:48px;
+      height:48px;
+      object-fit:contain;
+      border-radius:50%;
     }
 
     .nav-links{
       display:flex;
-      gap:28px;
+      gap:30px;
     }
 
     .nav-links a{
@@ -78,29 +98,30 @@
       color:#0ea5e9;
     }
 
-    /* Hero */
+    /* HERO */
 
     .hero{
       min-height:100vh;
       display:flex;
       align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:140px 20px 80px;
+
       background:
       linear-gradient(rgba(15,23,42,0.65), rgba(15,23,42,0.65)),
-      url('https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-      color:white;
-      text-align:center;
-      padding:120px 20px 80px;
+      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
     }
 
     .hero-content{
-      max-width:800px;
-      margin:auto;
+      max-width:850px;
     }
 
     .hero h1{
       font-size:4rem;
       line-height:1.1;
-      margin-bottom:24px;
+      margin-bottom:25px;
       font-weight:700;
     }
 
@@ -113,103 +134,91 @@
     .btn{
       display:inline-block;
       padding:15px 34px;
+      border-radius:50px;
       background:#0ea5e9;
       color:white;
-      border-radius:50px;
       font-weight:600;
-      transition:0.3s;
-      box-shadow:0 10px 25px rgba(14,165,233,0.3);
+      transition:0.35s;
+      box-shadow:0 15px 35px rgba(14,165,233,0.35);
     }
 
     .btn:hover{
-      transform:translateY(-3px);
+      transform:translateY(-4px);
       background:#0284c7;
-      box-shadow:0 15px 35px rgba(14,165,233,0.4);
     }
 
-    /* Sections */
-
-    section{
-      padding:100px 0;
-    }
+    /* TITLES */
 
     .section-title{
       text-align:center;
-      margin-bottom:60px;
+      margin-bottom:70px;
     }
 
     .section-title h2{
-      font-size:2.5rem;
-      margin-bottom:15px;
-      color:#0f172a;
+      font-size:2.8rem;
+      margin-bottom:18px;
     }
 
     .section-title p{
-      color:#64748b;
-      max-width:700px;
+      max-width:750px;
       margin:auto;
+      color:#64748b;
     }
 
-    /* About */
+    /* TOUR CARDS */
 
-    .about{
+    .tour-grid{
       display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:60px;
-      align-items:center;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:35px;
     }
 
-    .about img{
-      width:100%;
-      border-radius:24px;
-      box-shadow:0 20px 40px rgba(0,0,0,0.1);
+    .tour-card{
+      background:white;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 15px 40px rgba(0,0,0,0.06);
+      transition:0.4s;
     }
 
-    .about-text h3{
-      font-size:2rem;
+    .tour-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 25px 50px rgba(0,0,0,0.1);
+    }
+
+    .tour-card img{
+      height:280px;
+      object-fit:cover;
+    }
+
+    .tour-content{
+      padding:35px;
+    }
+
+    .tour-content h3{
+      font-size:1.7rem;
+      margin-bottom:10px;
+    }
+
+    .tour-subtitle{
+      color:#0ea5e9;
+      font-weight:600;
       margin-bottom:20px;
-      color:#0f172a;
     }
 
-    .about-text p{
+    .tour-content p{
       color:#475569;
       margin-bottom:18px;
     }
 
-    /* Features */
-
-    .features-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:30px;
-    }
-
-    .feature-card{
-      background:white;
-      padding:35px;
-      border-radius:22px;
-      transition:0.35s;
-      box-shadow:0 10px 30px rgba(0,0,0,0.05);
-      border:1px solid rgba(0,0,0,0.04);
-    }
-
-    .feature-card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 20px 40px rgba(0,0,0,0.08);
-    }
-
-    .feature-icon{
-      font-size:2rem;
+    .tour-content ul{
+      padding-left:20px;
       margin-bottom:20px;
+      color:#475569;
     }
 
-    .feature-card h3{
-      margin-bottom:15px;
-      color:#0f172a;
-    }
-
-    .feature-card p{
-      color:#64748b;
+    .tour-content li{
+      margin-bottom:10px;
     }
 
     /* CTA */
@@ -219,11 +228,11 @@
       color:white;
       border-radius:32px;
       text-align:center;
-      padding:70px 30px;
+      padding:80px 30px;
     }
 
     .cta h2{
-      font-size:2.5rem;
+      font-size:2.8rem;
       margin-bottom:20px;
     }
 
@@ -243,39 +252,51 @@
       background:#f1f5f9;
     }
 
-    /* Contact */
+    /* CONTACT */
 
     .contact-box{
-      background:white;
-      padding:50px;
-      border-radius:28px;
-      box-shadow:0 15px 35px rgba(0,0,0,0.06);
-      text-align:center;
-      max-width:700px;
+      max-width:750px;
       margin:auto;
+      background:white;
+      padding:60px 40px;
+      border-radius:30px;
+      text-align:center;
+      box-shadow:0 15px 40px rgba(0,0,0,0.06);
     }
 
     .contact-box h3{
-      font-size:2rem;
+      font-size:2.2rem;
       margin-bottom:20px;
     }
 
-    .contact-info{
-      margin-top:25px;
-    }
-
-    .contact-info p{
-      margin:12px 0;
+    .contact-box p{
       color:#475569;
-      font-size:1.05rem;
+      margin-bottom:15px;
     }
 
-    .contact-info a{
-      color:#0ea5e9;
+    .social-links{
+      margin-top:25px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .social-links a{
+      padding:12px 24px;
+      border-radius:50px;
+      background:#f1f5f9;
+      color:#0f172a;
       font-weight:600;
+      transition:0.3s;
     }
 
-    /* Footer */
+    .social-links a:hover{
+      background:#0ea5e9;
+      color:white;
+    }
+
+    /* FOOTER */
 
     footer{
       padding:30px 0;
@@ -284,7 +305,7 @@
       font-size:0.95rem;
     }
 
-    /* Responsive */
+    /* RESPONSIVE */
 
     @media(max-width:900px){
 
@@ -292,20 +313,22 @@
         font-size:2.8rem;
       }
 
-      .about{
-        grid-template-columns:1fr;
-      }
-
-      .nav-links{
-        gap:16px;
+      .section-title h2{
+        font-size:2.2rem;
       }
     }
 
-    @media(max-width:600px){
+    @media(max-width:700px){
 
       nav{
         flex-direction:column;
-        gap:15px;
+        gap:18px;
+      }
+
+      .nav-links{
+        gap:18px;
+        flex-wrap:wrap;
+        justify-content:center;
       }
 
       .hero h1{
@@ -316,12 +339,16 @@
         font-size:1rem;
       }
 
-      .section-title h2{
+      .tour-content{
+        padding:28px;
+      }
+
+      .cta h2{
         font-size:2rem;
       }
 
       .contact-box{
-        padding:35px 25px;
+        padding:40px 25px;
       }
     }
 
@@ -329,146 +356,229 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- HEADER -->
 
   <header>
     <div class="container">
+
       <nav>
-        <div class="logo">Travel by Gohar</div>
+
+        <div class="logo">
+          <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_205607.png?v=1778777828" alt="Logo">
+          Travel by Gohar
+        </div>
 
         <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#features">Why Us</a>
+          <a href="#tours">Tours</a>
           <a href="#contact">Contact</a>
+          <a href="https://www.instagram.com/gohar_diamond?igsh=anN3a2hhZGNpenNm" target="_blank">Instagram</a>
         </div>
+
       </nav>
+
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
 
   <section class="hero">
+
     <div class="hero-content">
-      <h1>Discover Armenia’s Hidden Jewels</h1>
+
+      <h1>DISCOVER ARMENIA’S HIDDEN JEWELS</h1>
 
       <p>
-        Luxury tours, breathtaking landscapes, authentic Armenian culture,
-        and unforgettable travel experiences designed personally for you.
+        Experience the beauty of Armenia through personalized journeys,
+        authentic hospitality, breathtaking landscapes, and unforgettable
+        cultural experiences.
       </p>
 
-      <a href="#contact" class="btn">Book Your Journey</a>
+      <a href="https://wa.me/37498488858" class="btn">
+        Book Your Journey
+      </a>
+
     </div>
+
   </section>
 
-  <!-- About -->
+  <!-- TOURS -->
 
-  <section id="about">
+  <section id="tours">
+
     <div class="container">
 
       <div class="section-title">
-        <h2>About Us</h2>
+
+        <h2>Popular Tours</h2>
 
         <p>
-          Travel by Gohar creates elegant and personalized travel experiences
-          across Armenia with comfort, authenticity, and warm hospitality.
+          Explore Armenia through unforgettable cultural, historical,
+          and nature-filled experiences designed with comfort and elegance.
         </p>
+
       </div>
 
-      <div class="about">
+      <div class="tour-grid">
 
-        <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=1200&auto=format&fit=crop" alt="Armenia Travel">
+        <!-- TOUR 1 -->
 
-        <div class="about-text">
-          <h3>Experience Armenia Like Never Before</h3>
+        <div class="tour-card">
 
-          <p>
-            From ancient monasteries and mountain landscapes to luxury experiences
-            and cultural discoveries, every journey is carefully designed with
-            attention to detail.
-          </p>
+          <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_210026.png?v=1778778031" alt="Sevan Tsaghkadzor Tour">
 
-          <p>
-            We offer private tours, chauffeur services, adventure experiences,
-            and unforgettable moments for travelers seeking beauty, comfort,
-            and authenticity.
-          </p>
+          <div class="tour-content">
 
-          <a href="#contact" class="btn">Contact Us</a>
+            <h3>Sevan • Tsaghkadzor Tour</h3>
+
+            <div class="tour-subtitle">
+              Mountains • Nature • Adventure • Monasteries
+            </div>
+
+            <p>
+              Experience breathtaking mountain landscapes, crystal-clear lake views,
+              medieval monasteries, and unforgettable Armenian nature.
+            </p>
+
+            <ul>
+              <li>Visit stunning Lake Sevan</li>
+              <li>Explore Sevanavank Monastery</li>
+              <li>Enjoy Tsaghkadzor Ropeway</li>
+              <li>Visit Kecharis Monastery</li>
+            </ul>
+
+            <p>
+              One of Armenia’s most popular destinations combining fresh air,
+              adventure, and peaceful natural beauty.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- TOUR 2 -->
+
+        <div class="tour-card">
+
+          <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_210419.png?v=1778778258" alt="Dilijan Tour">
+
+          <div class="tour-content">
+
+            <h3>Dilijan Tour</h3>
+
+            <div class="tour-subtitle">
+              Forests • Healing Air • Monasteries
+            </div>
+
+            <p>
+              Discover the green paradise of Armenia, often called the
+              “Armenian Switzerland”.
+            </p>
+
+            <ul>
+              <li>Visit Haghartsin Monastery</li>
+              <li>Explore Goshavank Monastery</li>
+              <li>Walk through forest landscapes</li>
+              <li>Enjoy peaceful mountain atmosphere</li>
+            </ul>
+
+            <p>
+              Perfect for nature lovers and travelers seeking calm,
+              inspiration, and fresh mountain air.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- TOUR 3 -->
+
+        <div class="tour-card">
+
+          <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_210636.png?v=1778778392" alt="Yerevan Tour">
+
+          <div class="tour-content">
+
+            <h3>Yerevan City Tour</h3>
+
+            <div class="tour-subtitle">
+              Culture • Architecture • City Life
+            </div>
+
+            <p>
+              Explore one of the world’s oldest cities through culture,
+              architecture, cafés, and vibrant city life.
+            </p>
+
+            <ul>
+              <li>Republic Square</li>
+              <li>Cascade Complex</li>
+              <li>Opera House</li>
+              <li>Northern Avenue</li>
+            </ul>
+
+            <p>
+              Discover Armenian history, traditions, modern lifestyle,
+              and iconic cultural landmarks.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- TOUR 4 -->
+
+        <div class="tour-card">
+
+          <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_211100.png?v=1778778654" alt="Gyumri Tour">
+
+          <div class="tour-content">
+
+            <h3>Gyumri Cultural Tour</h3>
+
+            <div class="tour-subtitle">
+              Art • History • Armenian Culture
+            </div>
+
+            <p>
+              Discover the artistic soul of Gyumri, Armenia’s cultural capital,
+              famous for black tuff architecture and traditions.
+            </p>
+
+            <ul>
+              <li>Kumayri Historic District</li>
+              <li>Black Fortress</li>
+              <li>Museums & galleries</li>
+              <li>Traditional Armenian cuisine</li>
+            </ul>
+
+            <p>
+              Experience authentic Armenian spirit, creativity,
+              history, and warm hospitality.
+            </p>
+
+          </div>
+
         </div>
 
       </div>
 
     </div>
-  </section>
 
-  <!-- Features -->
-
-  <section id="features">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Why Choose Us</h2>
-
-        <p>
-          We combine luxury, local expertise, and authentic experiences
-          to create memorable journeys across Armenia.
-        </p>
-      </div>
-
-      <div class="features-grid">
-
-        <div class="feature-card">
-          <div class="feature-icon">🌍</div>
-          <h3>Personalized Tours</h3>
-          <p>
-            Custom travel experiences designed around your interests,
-            schedule, and travel style.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">🚘</div>
-          <h3>Comfortable Transport</h3>
-          <p>
-            Modern vehicles, private drivers, and premium chauffeur services
-            for stress-free travel.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">🏔️</div>
-          <h3>Beautiful Destinations</h3>
-          <p>
-            Explore mountains, lakes, monasteries, forests, and cultural
-            landmarks throughout Armenia.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">⭐</div>
-          <h3>Authentic Hospitality</h3>
-          <p>
-            Experience genuine Armenian warmth, local traditions,
-            and unforgettable cultural moments.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
   </section>
 
   <!-- CTA -->
 
   <section>
+
     <div class="container">
+
       <div class="cta">
 
-        <h2>Your Armenian Adventure Starts Here</h2>
+        <h2>Experience The True Armenia</h2>
 
         <p>
-          Discover culture, nature, luxury, and unforgettable memories
-          with Travel by Gohar.
+          Luxury tours, breathtaking nature, authentic culture,
+          and unforgettable memories — all designed personally for you.
         </p>
 
         <a href="https://wa.me/37498488858" class="btn">
@@ -476,59 +586,63 @@
         </a>
 
       </div>
+
     </div>
+
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
 
   <section id="contact">
+
     <div class="container">
 
       <div class="section-title">
+
         <h2>Contact Us</h2>
 
         <p>
-          Ready to explore Armenia? Get in touch and let’s plan your perfect trip.
+          Plan your unforgettable Armenian adventure with Travel by Gohar.
         </p>
+
       </div>
 
       <div class="contact-box">
 
         <h3>Travel by Gohar</h3>
 
-        <div class="contact-info">
-          <p>📍 Armenia</p>
+        <p>📍 Armenia</p>
 
-          <p>
-            📞 WhatsApp:
-            <a href="https://wa.me/37498488858">
-              +374 98 488858
-            </a>
-          </p>
+        <p>📞 WhatsApp: +374 98 488858</p>
 
-          <p>
-            📧 Email:
-            <a href="mailto:gohararmeniatours@gmail.com">
-              gohararmeniatours@gmail.com
-            </a>
-          </p>
+        <p>✈️ Private Tours • Chauffeur Services • VIP Experiences</p>
 
-          <p>
-            🌍 Personalized Tours • Chauffeur Services • VIP Experiences
-          </p>
+        <div class="social-links">
+
+          <a href="https://wa.me/37498488858">
+            WhatsApp
+          </a>
+
+          <a href="https://www.instagram.com/gohar_diamond?igsh=anN3a2hhZGNpenNm" target="_blank">
+            Instagram
+          </a>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
 
   <footer>
+
     <div class="container">
-      © 2026 Travel by Gohar. All rights reserved.
+      © 2026 Travel by Gohar — Discover Armenia’s Hidden Jewels
     </div>
+
   </footer>
 
 </body>
