@@ -1,649 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Travel by Gohar</title>
+<!-- ADD THIS INSIDE YOUR .tour-grid SECTION -->
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- GARNI TOUR -->
 
-  <style>
+<div class="tour-card">
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+  <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_213214.png?v=1778779935" alt="Garni Tour">
 
-    html{
-      scroll-behavior:smooth;
-    }
+  <div class="tour-content">
 
-    body{
-      font-family:'Poppins', sans-serif;
-      background:#f8fafc;
-      color:#0f172a;
-      line-height:1.7;
-    }
+    <h3>Garni • Geghard • Symphony of Stones</h3>
 
-    img{
-      width:100%;
-      display:block;
-    }
-
-    a{
-      text-decoration:none;
-    }
-
-    .container{
-      width:90%;
-      max-width:1200px;
-      margin:auto;
-    }
-
-    section{
-      padding:100px 0;
-    }
-
-    /* HEADER */
-
-    header{
-      position:fixed;
-      width:100%;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,0.92);
-      backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(0,0,0,0.05);
-    }
-
-    nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:18px 0;
-    }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      font-weight:700;
-      font-size:1.2rem;
-      color:#0f172a;
-    }
-
-    .logo img{
-      width:48px;
-      height:48px;
-      object-fit:contain;
-      border-radius:50%;
-    }
-
-    .nav-links{
-      display:flex;
-      gap:30px;
-    }
-
-    .nav-links a{
-      color:#334155;
-      font-weight:500;
-      transition:0.3s;
-    }
-
-    .nav-links a:hover{
-      color:#0ea5e9;
-    }
-
-    /* HERO */
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:white;
-      padding:140px 20px 80px;
-
-      background:
-      linear-gradient(rgba(15,23,42,0.65), rgba(15,23,42,0.65)),
-      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-    }
-
-    .hero-content{
-      max-width:850px;
-    }
-
-    .hero h1{
-      font-size:4rem;
-      line-height:1.1;
-      margin-bottom:25px;
-      font-weight:700;
-    }
-
-    .hero p{
-      font-size:1.2rem;
-      color:#e2e8f0;
-      margin-bottom:40px;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:15px 34px;
-      border-radius:50px;
-      background:#0ea5e9;
-      color:white;
-      font-weight:600;
-      transition:0.35s;
-      box-shadow:0 15px 35px rgba(14,165,233,0.35);
-    }
-
-    .btn:hover{
-      transform:translateY(-4px);
-      background:#0284c7;
-    }
-
-    /* TITLES */
-
-    .section-title{
-      text-align:center;
-      margin-bottom:70px;
-    }
-
-    .section-title h2{
-      font-size:2.8rem;
-      margin-bottom:18px;
-    }
-
-    .section-title p{
-      max-width:750px;
-      margin:auto;
-      color:#64748b;
-    }
-
-    /* TOUR CARDS */
-
-    .tour-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:35px;
-    }
-
-    .tour-card{
-      background:white;
-      border-radius:28px;
-      overflow:hidden;
-      box-shadow:0 15px 40px rgba(0,0,0,0.06);
-      transition:0.4s;
-    }
-
-    .tour-card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 25px 50px rgba(0,0,0,0.1);
-    }
-
-    .tour-card img{
-      height:280px;
-      object-fit:cover;
-    }
-
-    .tour-content{
-      padding:35px;
-    }
-
-    .tour-content h3{
-      font-size:1.7rem;
-      margin-bottom:10px;
-    }
-
-    .tour-subtitle{
-      color:#0ea5e9;
-      font-weight:600;
-      margin-bottom:20px;
-    }
-
-    .tour-content p{
-      color:#475569;
-      margin-bottom:18px;
-    }
-
-    .tour-content ul{
-      padding-left:20px;
-      margin-bottom:20px;
-      color:#475569;
-    }
-
-    .tour-content li{
-      margin-bottom:10px;
-    }
-
-    /* CTA */
-
-    .cta{
-      background:linear-gradient(135deg,#0ea5e9,#2563eb);
-      color:white;
-      border-radius:32px;
-      text-align:center;
-      padding:80px 30px;
-    }
-
-    .cta h2{
-      font-size:2.8rem;
-      margin-bottom:20px;
-    }
-
-    .cta p{
-      max-width:700px;
-      margin:auto auto 35px;
-      color:#e2e8f0;
-    }
-
-    .cta .btn{
-      background:white;
-      color:#0f172a;
-      box-shadow:none;
-    }
-
-    .cta .btn:hover{
-      background:#f1f5f9;
-    }
-
-    /* CONTACT */
-
-    .contact-box{
-      max-width:750px;
-      margin:auto;
-      background:white;
-      padding:60px 40px;
-      border-radius:30px;
-      text-align:center;
-      box-shadow:0 15px 40px rgba(0,0,0,0.06);
-    }
-
-    .contact-box h3{
-      font-size:2.2rem;
-      margin-bottom:20px;
-    }
-
-    .contact-box p{
-      color:#475569;
-      margin-bottom:15px;
-    }
-
-    .social-links{
-      margin-top:25px;
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .social-links a{
-      padding:12px 24px;
-      border-radius:50px;
-      background:#f1f5f9;
-      color:#0f172a;
-      font-weight:600;
-      transition:0.3s;
-    }
-
-    .social-links a:hover{
-      background:#0ea5e9;
-      color:white;
-    }
-
-    /* FOOTER */
-
-    footer{
-      padding:30px 0;
-      text-align:center;
-      color:#64748b;
-      font-size:0.95rem;
-    }
-
-    /* RESPONSIVE */
-
-    @media(max-width:900px){
-
-      .hero h1{
-        font-size:2.8rem;
-      }
-
-      .section-title h2{
-        font-size:2.2rem;
-      }
-    }
-
-    @media(max-width:700px){
-
-      nav{
-        flex-direction:column;
-        gap:18px;
-      }
-
-      .nav-links{
-        gap:18px;
-        flex-wrap:wrap;
-        justify-content:center;
-      }
-
-      .hero h1{
-        font-size:2.2rem;
-      }
-
-      .hero p{
-        font-size:1rem;
-      }
-
-      .tour-content{
-        padding:28px;
-      }
-
-      .cta h2{
-        font-size:2rem;
-      }
-
-      .contact-box{
-        padding:40px 25px;
-      }
-    }
-
-  </style>
-</head>
-<body>
-
-  <!-- HEADER -->
-
-  <header>
-    <div class="container">
-
-      <nav>
-
-        <div class="logo">
-          <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_205607.png?v=1778777828" alt="Logo">
-          Travel by Gohar
-        </div>
-
-        <div class="nav-links">
-          <a href="#tours">Tours</a>
-          <a href="#contact">Contact</a>
-          <a href="https://www.instagram.com/gohar_diamond?igsh=anN3a2hhZGNpenNm" target="_blank">Instagram</a>
-        </div>
-
-      </nav>
-
-    </div>
-  </header>
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <h1>DISCOVER ARMENIA’S HIDDEN JEWELS</h1>
-
-      <p>
-        Experience the beauty of Armenia through personalized journeys,
-        authentic hospitality, breathtaking landscapes, and unforgettable
-        cultural experiences.
-      </p>
-
-      <a href="https://wa.me/37498488858" class="btn">
-        Book Your Journey
-      </a>
-
+    <div class="tour-subtitle">
+      Ancient History • Nature • Culture
     </div>
 
-  </section>
+    <p>
+      Discover the ancient history and breathtaking natural wonders of Armenia
+      during this unforgettable cultural journey.
+    </p>
 
-  <!-- TOURS -->
+    <ul>
+      <li>Garni Temple</li>
+      <li>Geghard Monastery</li>
+      <li>Symphony of Stones</li>
+      <li>Azat River Gorge</li>
+      <li>Mountain landscapes</li>
+    </ul>
 
-  <section id="tours">
+    <p>
+      Experience pagan history, medieval spirituality, volcanic landscapes,
+      and unforgettable Armenian cultural heritage.
+    </p>
 
-    <div class="container">
+  </div>
 
-      <div class="section-title">
+</div>
 
-        <h2>Popular Tours</h2>
+<!-- SECOND IMAGE CARD -->
 
-        <p>
-          Explore Armenia through unforgettable cultural, historical,
-          and nature-filled experiences designed with comfort and elegance.
-        </p>
+<div class="tour-card">
 
-      </div>
+  <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_213202.png?v=1778779931" alt="Geghard Tour">
 
-      <div class="tour-grid">
+  <div class="tour-content">
 
-        <!-- TOUR 1 -->
+    <h3>Garni Temple & Geghard</h3>
 
-        <div class="tour-card">
-
-          <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_210026.png?v=1778778031" alt="Sevan Tsaghkadzor Tour">
-
-          <div class="tour-content">
-
-            <h3>Sevan • Tsaghkadzor Tour</h3>
-
-            <div class="tour-subtitle">
-              Mountains • Nature • Adventure • Monasteries
-            </div>
-
-            <p>
-              Experience breathtaking mountain landscapes, crystal-clear lake views,
-              medieval monasteries, and unforgettable Armenian nature.
-            </p>
-
-            <ul>
-              <li>Visit stunning Lake Sevan</li>
-              <li>Explore Sevanavank Monastery</li>
-              <li>Enjoy Tsaghkadzor Ropeway</li>
-              <li>Visit Kecharis Monastery</li>
-            </ul>
-
-            <p>
-              One of Armenia’s most popular destinations combining fresh air,
-              adventure, and peaceful natural beauty.
-            </p>
-
-          </div>
-
-        </div>
-
-        <!-- TOUR 2 -->
-
-        <div class="tour-card">
-
-          <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_210419.png?v=1778778258" alt="Dilijan Tour">
-
-          <div class="tour-content">
-
-            <h3>Dilijan Tour</h3>
-
-            <div class="tour-subtitle">
-              Forests • Healing Air • Monasteries
-            </div>
-
-            <p>
-              Discover the green paradise of Armenia, often called the
-              “Armenian Switzerland”.
-            </p>
-
-            <ul>
-              <li>Visit Haghartsin Monastery</li>
-              <li>Explore Goshavank Monastery</li>
-              <li>Walk through forest landscapes</li>
-              <li>Enjoy peaceful mountain atmosphere</li>
-            </ul>
-
-            <p>
-              Perfect for nature lovers and travelers seeking calm,
-              inspiration, and fresh mountain air.
-            </p>
-
-          </div>
-
-        </div>
-
-        <!-- TOUR 3 -->
-
-        <div class="tour-card">
-
-          <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_210636.png?v=1778778392" alt="Yerevan Tour">
-
-          <div class="tour-content">
-
-            <h3>Yerevan City Tour</h3>
-
-            <div class="tour-subtitle">
-              Culture • Architecture • City Life
-            </div>
-
-            <p>
-              Explore one of the world’s oldest cities through culture,
-              architecture, cafés, and vibrant city life.
-            </p>
-
-            <ul>
-              <li>Republic Square</li>
-              <li>Cascade Complex</li>
-              <li>Opera House</li>
-              <li>Northern Avenue</li>
-            </ul>
-
-            <p>
-              Discover Armenian history, traditions, modern lifestyle,
-              and iconic cultural landmarks.
-            </p>
-
-          </div>
-
-        </div>
-
-        <!-- TOUR 4 -->
-
-        <div class="tour-card">
-
-          <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_211100.png?v=1778778654" alt="Gyumri Tour">
-
-          <div class="tour-content">
-
-            <h3>Gyumri Cultural Tour</h3>
-
-            <div class="tour-subtitle">
-              Art • History • Armenian Culture
-            </div>
-
-            <p>
-              Discover the artistic soul of Gyumri, Armenia’s cultural capital,
-              famous for black tuff architecture and traditions.
-            </p>
-
-            <ul>
-              <li>Kumayri Historic District</li>
-              <li>Black Fortress</li>
-              <li>Museums & galleries</li>
-              <li>Traditional Armenian cuisine</li>
-            </ul>
-
-            <p>
-              Experience authentic Armenian spirit, creativity,
-              history, and warm hospitality.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
+    <div class="tour-subtitle">
+      UNESCO Heritage • Monasteries • Landscapes
     </div>
 
-  </section>
+    <p>
+      Visit the magnificent Garni Temple and the UNESCO-listed Geghard
+      Monastery carved into surrounding cliffs.
+    </p>
 
-  <!-- CTA -->
+    <ul>
+      <li>Cave churches</li>
+      <li>Spiritual atmosphere</li>
+      <li>Ancient Armenian architecture</li>
+      <li>Photography destinations</li>
+    </ul>
 
-  <section>
+  </div>
 
-    <div class="container">
+</div>
 
-      <div class="cta">
+<!-- SPIRITUAL ARMENIA -->
 
-        <h2>Experience The True Armenia</h2>
+<div class="tour-card">
 
-        <p>
-          Luxury tours, breathtaking nature, authentic culture,
-          and unforgettable memories — all designed personally for you.
-        </p>
+  <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_213423.png?v=1778780059" alt="Khor Virap">
 
-        <a href="https://wa.me/37498488858" class="btn">
-          Contact on WhatsApp
-        </a>
+  <div class="tour-content">
 
-      </div>
+    <h3>Spiritual Armenia Tour</h3>
 
+    <div class="tour-subtitle">
+      Monasteries • Faith • Ancient Heritage
     </div>
 
-  </section>
+    <p>
+      Step into the spiritual soul of Armenia through sacred monasteries,
+      breathtaking landscapes, and ancient Christian history.
+    </p>
 
-  <!-- CONTACT -->
+    <ul>
+      <li>Khor Virap Monastery</li>
+      <li>Mount Ararat views</li>
+      <li>Ancient pilgrimage sites</li>
+      <li>Christian heritage</li>
+    </ul>
 
-  <section id="contact">
+  </div>
 
-    <div class="container">
+</div>
 
-      <div class="section-title">
+<!-- NORAVANK -->
 
-        <h2>Contact Us</h2>
+<div class="tour-card">
 
-        <p>
-          Plan your unforgettable Armenian adventure with Travel by Gohar.
-        </p>
+  <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_213633.png?v=1778780189" alt="Noravank">
 
-      </div>
+  <div class="tour-content">
 
-      <div class="contact-box">
+    <h3>Noravank Monastery</h3>
 
-        <h3>Travel by Gohar</h3>
-
-        <p>📍 Armenia</p>
-
-        <p>📞 WhatsApp: +374 98 488858</p>
-
-        <p>✈️ Private Tours • Chauffeur Services • VIP Experiences</p>
-
-        <div class="social-links">
-
-          <a href="https://wa.me/37498488858">
-            WhatsApp
-          </a>
-
-          <a href="https://www.instagram.com/gohar_diamond?igsh=anN3a2hhZGNpenNm" target="_blank">
-            Instagram
-          </a>
-
-        </div>
-
-      </div>
-
+    <div class="tour-subtitle">
+      Red Cliffs • Architecture • Nature
     </div>
 
-  </section>
+    <p>
+      Hidden among dramatic red canyon cliffs, Noravank Monastery is one of
+      Armenia’s most iconic spiritual and architectural landmarks.
+    </p>
 
-  <!-- FOOTER -->
+    <ul>
+      <li>13th-century monastery</li>
+      <li>Unique Armenian architecture</li>
+      <li>Breathtaking canyon landscapes</li>
+      <li>Peaceful atmosphere</li>
+    </ul>
 
-  <footer>
+  </div>
 
-    <div class="container">
-      © 2026 Travel by Gohar — Discover Armenia’s Hidden Jewels
+</div>
+
+<!-- TATEV -->
+
+<div class="tour-card">
+
+  <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_213826.png?v=1778780309" alt="Tatev">
+
+  <div class="tour-content">
+
+    <h3>Tatev Monastery</h3>
+
+    <div class="tour-subtitle">
+      Mountains • History • Spirituality
     </div>
 
-  </footer>
+    <p>
+      Explore one of Armenia’s greatest medieval spiritual centers surrounded
+      by deep gorges and spectacular mountain scenery.
+    </p>
 
-</body>
-</html>
+    <ul>
+      <li>Ancient monastery complex</li>
+      <li>Vorotan Gorge views</li>
+      <li>Historic Armenian heritage</li>
+      <li>Unforgettable landscapes</li>
+    </ul>
+
+  </div>
+
+</div>
+
+<!-- WINGS OF TATEV -->
+
+<div class="tour-card">
+
+  <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_214013.png?v=1778780409" alt="Wings of Tatev">
+
+  <div class="tour-content">
+
+    <h3>Wings of Tatev</h3>
+
+    <div class="tour-subtitle">
+      Cable Car • Adventure • Views
+    </div>
+
+    <p>
+      Experience the world’s longest reversible cable car above the breathtaking
+      Vorotan Gorge on the way to Tatev Monastery.
+    </p>
+
+    <ul>
+      <li>Panoramic mountain views</li>
+      <li>Adventure experience</li>
+      <li>Unique Armenian attraction</li>
+      <li>Perfect for photography</li>
+    </ul>
+
+  </div>
+
+</div>
