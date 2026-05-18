@@ -14,438 +14,594 @@
 <style>
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:'Poppins',sans-serif;
-  background:#f8fafc;
-  color:#111827;
-  overflow-x:hidden;
+font-family:'Poppins',sans-serif;
+background:#f8fafc;
+color:#111827;
+overflow-x:hidden;
 }
 
 a{
-  text-decoration:none;
+text-decoration:none;
 }
 
 img{
-  width:100%;
-  display:block;
+width:100%;
+display:block;
 }
 
 .container{
-  width:90%;
-  max-width:1350px;
-  margin:auto;
+width:90%;
+max-width:1350px;
+margin:auto;
 }
 
 /* HEADER */
 
 header{
-  position:fixed;
-  width:100%;
-  top:0;
-  z-index:999;
-  background:rgba(0,0,0,0.25);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(255,255,255,0.08);
+position:fixed;
+width:100%;
+top:0;
+z-index:999;
+background:rgba(0,0,0,0.25);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  color:white;
-  font-weight:700;
-  font-size:1.15rem;
+display:flex;
+align-items:center;
+gap:14px;
+color:white;
+font-weight:700;
+font-size:1.15rem;
 }
 
 .logo img{
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  object-fit:cover;
+width:55px;
+height:55px;
+border-radius:50%;
+object-fit:cover;
 }
 
 .nav-links{
-  display:flex;
-  align-items:center;
-  gap:30px;
+display:flex;
+align-items:center;
+gap:30px;
 }
 
 .nav-links a{
-  color:white;
-  font-weight:500;
-  transition:0.3s;
+color:white;
+font-weight:500;
+transition:0.3s;
 }
 
 .nav-links a:hover{
-  color:#dbeafe;
+color:#dbeafe;
 }
 
 /* HERO */
 
 .hero{
-  position:relative;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
+position:relative;
+height:100vh;
+display:flex;
+align-items:center;
+overflow:hidden;
 }
 
 .hero img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 .hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to right,
-    rgba(0,0,0,0.85),
-    rgba(0,0,0,0.35)
-  );
+position:absolute;
+inset:0;
+background:linear-gradient(
+to right,
+rgba(0,0,0,0.85),
+rgba(0,0,0,0.35)
+);
 }
 
 .hero-content{
-  position:relative;
-  z-index:2;
-  color:white;
-  max-width:760px;
-  padding-left:7%;
+position:relative;
+z-index:2;
+color:white;
+max-width:760px;
+padding-left:7%;
 }
 
 .hero-small{
-  display:inline-block;
-  margin-bottom:20px;
-  font-size:0.95rem;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:#dbeafe;
+display:inline-block;
+margin-bottom:20px;
+font-size:0.95rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#dbeafe;
 }
 
 .hero h1{
-  font-size:5rem;
-  line-height:1.05;
-  margin-bottom:28px;
-  font-weight:800;
+font-size:5rem;
+line-height:1.05;
+margin-bottom:28px;
+font-weight:800;
 }
 
 .hero p{
-  font-size:1.15rem;
-  line-height:1.8;
-  color:#f1f5f9;
-  margin-bottom:40px;
+font-size:1.15rem;
+line-height:1.8;
+color:#f1f5f9;
+margin-bottom:40px;
 }
 
 .hero-buttons{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
+display:flex;
+gap:18px;
+flex-wrap:wrap;
 }
 
 .main-btn{
-  padding:16px 36px;
-  border-radius:60px;
-  background:white;
-  color:#111827;
-  font-weight:600;
-  transition:0.3s;
+padding:16px 36px;
+border-radius:60px;
+background:white;
+color:#111827;
+font-weight:600;
+transition:0.3s;
 }
 
 .main-btn:hover{
-  transform:translateY(-5px);
+transform:translateY(-5px);
 }
 
 .secondary-btn{
-  padding:16px 36px;
-  border-radius:60px;
-  border:1px solid rgba(255,255,255,0.4);
-  color:white;
-  font-weight:600;
-  backdrop-filter:blur(10px);
-  transition:0.3s;
+padding:16px 36px;
+border-radius:60px;
+border:1px solid rgba(255,255,255,0.4);
+color:white;
+font-weight:600;
+backdrop-filter:blur(10px);
+transition:0.3s;
 }
 
 .secondary-btn:hover{
-  background:rgba(255,255,255,0.1);
+background:rgba(255,255,255,0.1);
 }
 
 /* SECTIONS */
 
 section{
-  padding:110px 0;
+padding:110px 0;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:70px;
+text-align:center;
+margin-bottom:70px;
 }
 
 .section-title h2{
-  font-size:3rem;
-  margin-bottom:18px;
+font-size:3rem;
+margin-bottom:18px;
 }
 
 .section-title p{
-  color:#64748b;
-  max-width:760px;
-  margin:auto;
-  line-height:1.8;
+color:#64748b;
+max-width:760px;
+margin:auto;
+line-height:1.8;
 }
 
 /* TOURS */
 
 .tour-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-  gap:32px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:32px;
 }
 
 .tour-card{
-  position:relative;
-  min-height:650px;
-  border-radius:30px;
-  overflow:hidden;
-  cursor:pointer;
-  transition:0.4s;
-  background:#000;
+position:relative;
+min-height:650px;
+border-radius:30px;
+overflow:hidden;
+cursor:pointer;
+transition:0.4s;
+background:#000;
 }
 
 .tour-card:hover{
-  transform:translateY(-10px);
+transform:translateY(-10px);
 }
 
 .tour-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.5s;
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.5s;
 }
 
 .tour-card:hover img{
-  transform:scale(1.08);
+transform:scale(1.08);
 }
 
 .tour-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.96),
-    rgba(0,0,0,0.08)
-  );
+position:absolute;
+inset:0;
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.96),
+rgba(0,0,0,0.08)
+);
 }
 
 .tour-content{
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  z-index:2;
-  padding:34px;
-  color:white;
-  backdrop-filter:blur(2px);
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+z-index:2;
+padding:34px;
+color:white;
+backdrop-filter:blur(2px);
 }
 
 .tour-subtitle{
-  color:#dbeafe;
-  margin-bottom:14px;
-  font-size:0.92rem;
-  letter-spacing:1px;
+color:#dbeafe;
+margin-bottom:14px;
+font-size:0.92rem;
+letter-spacing:1px;
 }
 
 .tour-content h3{
-  font-size:2rem;
-  margin-bottom:16px;
+font-size:2rem;
+margin-bottom:16px;
 }
 
 .tour-content p{
-  color:#f1f5f9;
-  line-height:1.7;
-  margin-bottom:18px;
-}
-
-.tour-details{
-  max-height:0;
-  overflow:hidden;
-  transition:0.5s ease;
-  scrollbar-width:none;
-}
-
-.tour-details::-webkit-scrollbar{
-  display:none;
-}
-
-.tour-card:hover .tour-details{
-  max-height:1200px;
-}
-
-.tour-details ul{
-  padding-left:18px;
-}
-
-.tour-details li{
-  margin-bottom:10px;
-  color:#e2e8f0;
+color:#f1f5f9;
+line-height:1.7;
+margin-bottom:18px;
 }
 
 /* INFO */
 
 .contact-box{
-  background:white;
-  border-radius:35px;
-  padding:70px 40px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.07);
-  max-width:1000px;
-  margin:auto;
+background:white;
+border-radius:35px;
+padding:70px 40px;
+box-shadow:0 20px 60px rgba(0,0,0,0.07);
+max-width:1000px;
+margin:auto;
 }
 
 .contact-box h3{
-  font-size:2.2rem;
-  margin-bottom:20px;
+font-size:2.2rem;
+margin-bottom:20px;
 }
 
 .contact-box p{
-  color:#475569;
-  margin-bottom:18px;
-  line-height:1.9;
+color:#475569;
+margin-bottom:18px;
+line-height:1.9;
 }
 
 .info-list{
-  margin-top:25px;
-  padding-left:20px;
+margin-top:25px;
+padding-left:20px;
 }
 
 .info-list li{
-  margin-bottom:14px;
-  color:#475569;
-  line-height:1.8;
+margin-bottom:14px;
+color:#475569;
+line-height:1.8;
+}
+
+/* WHY ARMENIA */
+
+.armenia-section{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.armenia-section img{
+border-radius:35px;
+height:650px;
+object-fit:cover;
+}
+
+.armenia-text h2{
+font-size:3rem;
+margin-bottom:25px;
+}
+
+.armenia-text p{
+color:#475569;
+line-height:1.9;
+margin-bottom:20px;
+}
+
+.armenia-btn{
+display:inline-block;
+margin-top:15px;
+padding:16px 34px;
+background:#111827;
+color:white;
+border-radius:50px;
+font-weight:600;
+transition:0.3s;
+}
+
+.armenia-btn:hover{
+transform:translateY(-4px);
 }
 
 /* SOCIALS */
 
 .social-icons{
-  display:flex;
-  gap:18px;
-  margin-top:35px;
+display:flex;
+gap:18px;
+margin-top:35px;
 }
 
 .social-icons a{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  background:#f1f5f9;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition:0.3s;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#f1f5f9;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:0.3s;
 }
 
 .social-icons a:hover{
-  transform:translateY(-5px);
-  background:#e2e8f0;
+transform:translateY(-5px);
+background:#e2e8f0;
 }
 
 .social-icons img{
-  width:30px;
-  height:30px;
+width:30px;
+height:30px;
 }
 
 /* FOOTER */
 
 footer{
-  padding:35px 20px;
-  text-align:center;
-  color:#64748b;
+padding:35px 20px;
+text-align:center;
+color:#64748b;
 }
 
 /* FLOAT */
 
 .whatsapp-float{
-  position:fixed;
-  right:24px;
-  bottom:24px;
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  background:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-  box-shadow:0 12px 30px rgba(0,0,0,0.25);
-  transition:0.3s;
+position:fixed;
+right:24px;
+bottom:24px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+box-shadow:0 12px 30px rgba(0,0,0,0.25);
+transition:0.3s;
 }
 
 .whatsapp-float:hover{
-  transform:scale(1.1);
+transform:scale(1.1);
 }
 
 .whatsapp-float img{
-  width:40px;
+width:40px;
+}
+
+/* MODAL */
+
+.modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.88);
+z-index:99999;
+overflow-y:auto;
+opacity:0;
+visibility:hidden;
+transition:0.35s;
+padding:60px 20px;
+}
+
+.modal.active{
+opacity:1;
+visibility:visible;
+}
+
+.modal-content{
+max-width:1000px;
+margin:auto;
+background:white;
+border-radius:35px;
+overflow:hidden;
+animation:fadeUp .4s ease;
+}
+
+@keyframes fadeUp{
+from{
+transform:translateY(40px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+.modal-image{
+width:100%;
+height:500px;
+object-fit:cover;
+}
+
+.modal-body{
+padding:50px;
+}
+
+.modal-body h2{
+font-size:3rem;
+margin-bottom:25px;
+}
+
+.modal-body h3{
+margin-top:40px;
+margin-bottom:16px;
+font-size:1.5rem;
+}
+
+.modal-body p{
+color:#475569;
+line-height:1.9;
+margin-bottom:18px;
+}
+
+.modal-body ul{
+padding-left:22px;
+margin-bottom:20px;
+}
+
+.modal-body li{
+margin-bottom:12px;
+color:#475569;
+line-height:1.8;
+}
+
+.close-modal{
+position:fixed;
+top:25px;
+right:25px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:white;
+border:none;
+font-size:2rem;
+cursor:pointer;
+z-index:100000;
+}
+
+.mail-link{
+color:#2563eb;
+font-weight:600;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
 
-  .hero h1{
-    font-size:3.2rem;
-  }
+.hero h1{
+font-size:3.2rem;
+}
 
-  .section-title h2{
-    font-size:2.3rem;
-  }
+.section-title h2{
+font-size:2.3rem;
+}
+
+.armenia-section{
+grid-template-columns:1fr;
+}
+
+.armenia-section img{
+height:420px;
+}
+
+.modal-body{
+padding:28px;
+}
+
+.modal-body h2{
+font-size:2rem;
+}
 
 }
 
 @media(max-width:700px){
 
-  nav{
-    flex-direction:column;
-    gap:16px;
-  }
+nav{
+flex-direction:column;
+gap:16px;
+}
 
-  .nav-links{
-    gap:18px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
+.nav-links{
+gap:18px;
+flex-wrap:wrap;
+justify-content:center;
+}
 
-  .hero{
-    text-align:center;
-    justify-content:center;
-  }
+.hero{
+text-align:center;
+justify-content:center;
+}
 
-  .hero-content{
-    padding:0 25px;
-  }
+.hero-content{
+padding:0 25px;
+}
 
-  .hero h1{
-    font-size:2.4rem;
-  }
+.hero h1{
+font-size:2.4rem;
+}
 
-  .hero-buttons{
-    justify-content:center;
-  }
+.hero-buttons{
+justify-content:center;
+}
+
+.tour-grid{
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+}
+
+.tour-card{
+min-height:320px;
+border-radius:22px;
+}
+
+.tour-content{
+padding:18px;
+}
+
+.tour-content h3{
+font-size:1rem;
+}
+
+.tour-content p{
+font-size:0.75rem;
+line-height:1.4;
+}
+
+.tour-subtitle{
+font-size:0.65rem;
+}
 
 }
 
@@ -462,7 +618,7 @@ footer{
 
 <div class="logo">
 
-<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/logo_d8adc67d-1bc7-4fb8-856f-d9eafe180bfb.jpg?v=1779022798">
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/logoo.jpg?v=1779100901">
 
 Gohar Armenia Tours
 
@@ -541,9 +697,9 @@ and authentic experiences.
 
 <div class="tour-grid">
 
-<div class="tour-card">
+<div class="tour-card" onclick="openModal('sevanModal')">
 
-<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_210026.png?v=1778778031">
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-79380313-9739331.jpg?v=1779098600">
 
 <div class="tour-overlay"></div>
 
@@ -556,60 +712,36 @@ Mountains • Nature • Adventure
 <h3>Sevan • Tsaghkadzor</h3>
 
 <p>
-Experience breathtaking lake views, monasteries,
-ropeway rides, and Armenian mountain landscapes.
+Lake views, ropeway rides, monasteries and breathtaking nature.
 </p>
 
-<div class="tour-details">
-
-<ul>
-<li>Lake Sevan</li>
-<li>Sevanavank Monastery</li>
-<li>Tsaghkadzor Ropeway</li>
-<li>Kecharis Monastery</li>
-<li>Mountain scenery</li>
-</ul>
-
 </div>
 
 </div>
 
-</div>
+<div class="tour-card" onclick="openModal('dilijanModal')">
 
-<div class="tour-card">
-
-<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_210419.png?v=1778778258">
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-arzu-ibaeva-479643718-16976814.jpg?v=1779098811">
 
 <div class="tour-overlay"></div>
 
 <div class="tour-content">
 
 <div class="tour-subtitle">
-Forests • Healing Air • Nature
+Forests • Nature • Peace
 </div>
 
 <h3>Dilijan Tour</h3>
 
 <p>
-Discover Armenia’s green paradise surrounded by forests and mountains.
+Armenian Switzerland with forests and mountain landscapes.
 </p>
 
-<div class="tour-details">
-
-<ul>
-<li>Haghartsin Monastery</li>
-<li>Goshavank Monastery</li>
-<li>Forest landscapes</li>
-<li>Mountain atmosphere</li>
-</ul>
-
 </div>
 
 </div>
 
-</div>
-
-<div class="tour-card">
+<div class="tour-card" onclick="openModal('yerevanModal')">
 
 <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/yerevan.jpg?v=1779023808">
 
@@ -621,29 +753,17 @@ Discover Armenia’s green paradise surrounded by forests and mountains.
 Culture • Architecture • City Life
 </div>
 
-<h3>Yerevan City Tour</h3>
+<h3>Yerevan Tour</h3>
 
 <p>
-Explore one of the oldest cities in the world filled with culture and history.
+Discover the vibrant capital of Armenia.
 </p>
 
-<div class="tour-details">
-
-<ul>
-<li>Republic Square</li>
-<li>Cascade Complex</li>
-<li>Opera House</li>
-<li>Northern Avenue</li>
-<li>Victory Park</li>
-</ul>
-
 </div>
 
 </div>
 
-</div>
-
-<div class="tour-card">
+<div class="tour-card" onclick="openModal('gyumriModal')">
 
 <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_211100.png?v=1778778654">
 
@@ -652,91 +772,58 @@ Explore one of the oldest cities in the world filled with culture and history.
 <div class="tour-content">
 
 <div class="tour-subtitle">
-Art • History • Armenian Culture
+Art • Culture • Traditions
 </div>
 
-<h3>Gyumri Cultural Tour</h3>
+<h3>Gyumri Tour</h3>
 
 <p>
-Discover Armenia’s cultural capital filled with traditions and art.
+The cultural soul of Armenia filled with traditions and history.
 </p>
 
-<div class="tour-details">
-
-<ul>
-<li>Kumayri District</li>
-<li>Black Fortress</li>
-<li>Museums & galleries</li>
-<li>Traditional Armenian cuisine</li>
-</ul>
-
 </div>
 
 </div>
 
-</div>
+<div class="tour-card" onclick="openModal('garniModal')">
 
-<div class="tour-card">
-
-<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_213214.png?v=1778779935">
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-vladimir-konoplev-155326297-11885398.jpg?v=1779099692">
 
 <div class="tour-overlay"></div>
 
 <div class="tour-content">
 
 <div class="tour-subtitle">
-Ancient History • Nature • Culture
+Ancient History • Nature
 </div>
 
-<h3>Garni • Geghard Tour</h3>
+<h3>Garni • Geghard</h3>
 
 <p>
-Ancient Armenian history combined with breathtaking natural wonders.
+Pagan history, monasteries and natural wonders.
 </p>
 
-<div class="tour-details">
-
-<ul>
-<li>Garni Temple</li>
-<li>Geghard Monastery</li>
-<li>Symphony of Stones</li>
-<li>Azat Gorge</li>
-</ul>
-
 </div>
 
 </div>
 
-</div>
+<div class="tour-card" onclick="openModal('spiritualModal')">
 
-<div class="tour-card">
-
-<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_213826.png?v=1778780309">
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-ash-haghighi-351057514-18500065.jpg?v=1779100029">
 
 <div class="tour-overlay"></div>
 
 <div class="tour-content">
 
 <div class="tour-subtitle">
-Mountains • Spirituality • Heritage
+Faith • Heritage • Monasteries
 </div>
 
 <h3>Spiritual Armenia</h3>
 
 <p>
-Explore Armenia’s most iconic monasteries and spiritual landscapes.
+Discover Armenia’s sacred spiritual heritage.
 </p>
-
-<div class="tour-details">
-
-<ul>
-<li>Khor Virap</li>
-<li>Noravank</li>
-<li>Tatev Monastery</li>
-<li>Wings of Tatev</li>
-</ul>
-
-</div>
 
 </div>
 
@@ -747,231 +834,6 @@ Explore Armenia’s most iconic monasteries and spiritual landscapes.
 </div>
 
 </section>
-
-<section>
-
-<div class="container">
-
-<div class="contact-box">
-
-<h3>Important Note</h3>
-
-<p>
-The above-mentioned programs are our ready-made tour packages.
-</p>
-
-<ul class="info-list">
-
-<li>Individual tours</li>
-<li>Luxury tours</li>
-<li>VIP experiences</li>
-<li>Honeymoon packages</li>
-<li>Family vacations</li>
-<li>Corporate trips</li>
-<li>Adventure tours</li>
-<li>Gastronomic experiences</li>
-<li>Business tours</li>
-
-</ul>
-
-<p>
-Every package can be customized according to your wishes,
-budget, and travel style.
-</p>
-
-<br>
-
-<h3>Visa Information</h3>
-
-<p>
-For Armenia visa information and e-visa application:
-</p>
-
-<p>
-<a href="https://evisa.mfa.am" target="_blank" style="color:#2563eb;font-weight:600;">
-Armenia eVisa Official Website
-</a>
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="tour-grid">
-
-<div class="tour-card">
-
-<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-453707837-15774577.jpg?v=1779025897">
-
-<div class="tour-overlay"></div>
-
-<div class="tour-content">
-
-<div class="tour-subtitle">
-Luxury • Comfort • Professionalism
-</div>
-
-<h3>Chauffeur Service</h3>
-
-<p>
-Travel across Armenia in complete comfort with our premium chauffeur service.
-</p>
-
-<div class="tour-details">
-
-<ul>
-<li>Airport transfers</li>
-<li>Private city transportation</li>
-<li>VIP transportation</li>
-<li>Luxury travel experiences</li>
-<li>Personalized travel routes</li>
-<li>Comfortable long-distance journeys</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="contact-box">
-
-<h3>Why Choose Gohar Armenia Tours?</h3>
-
-<ul class="info-list">
-
-<li>Multilingual professional guides</li>
-<li>Comfortable modern transportation</li>
-<li>Personalized service</li>
-<li>Carefully designed tour programs</li>
-<li>Warm Armenian hospitality</li>
-<li>Authentic local experiences</li>
-<li>Premium chauffeur service</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="contact-box">
-
-<h3>Why Visit Armenia</h3>
-
-<p>
-Armenia is one of the oldest countries in the world
-with a history dating back thousands of years.
-</p>
-
-<p>
-Armenia became the first country to adopt Christianity
-as a state religion in 301 AD, creating a rich spiritual heritage.
-</p>
-
-<p>
-From Lake Sevan and Dilijan forests to mountain landscapes,
-deep canyons, and ancient monasteries,
-Armenia offers incredible diversity for travelers.
-</p>
-
-<p>
-Visitors are welcomed not as tourists, but as guests,
-experiencing genuine Armenian hospitality and unforgettable memories.
-</p>
-
-<p>
-Armenia is also famous for ancient winemaking traditions
-and authentic cuisine made with fresh mountain ingredients.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="container">
-
-<div class="contact-box">
-
-<h3>Gohar Armenia Tours</h3>
-
-<p>
-Personalized journeys across Armenia with authentic hospitality,
-luxury experiences, and unforgettable memories.
-</p>
-
-<p>
-WhatsApp / Viber / Telegram: +37493488858
-</p>
-
-<p>
-Email: gohararmeniatours@gmail.com
-</p>
-
-<div class="social-icons">
-
-<a href="https://wa.me/37493488858" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-</a>
-
-<a href="https://t.me/37493488858" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
-</a>
-
-<a href="viber://chat?number=%2B37493488858">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Viber_logo_2018.svg">
-</a>
-
-<a href="https://www.instagram.com/armenia.tours.gohar?igsh=NmMyNzhrdTNpMjBz" target="_blank">
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 Gohar Armenia Tours — Discover Armenia’s Hidden Jewels
-
-</footer>
-
-<a href="https://wa.me/37493488858"
-class="whatsapp-float"
-target="_blank">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-
-</a>
 
 </body>
 </html>
