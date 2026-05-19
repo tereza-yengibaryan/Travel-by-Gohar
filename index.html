@@ -137,7 +137,7 @@ color:#dbeafe;
 }
 
 .hero h1{
-font-size:5rem;
+font-size:4.35rem;
 line-height:1.05;
 margin-bottom:26px;
 font-weight:800;
@@ -299,6 +299,45 @@ padding-left:20px;
 margin-bottom:12px;
 color:#475569;
 line-height:1.8;
+}
+
+
+/* SPLIT IMAGE SECTIONS */
+
+.split-section{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.split-section img{
+height:650px;
+object-fit:cover;
+border-radius:35px;
+}
+
+.service-lists{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+margin-top:20px;
+}
+
+.service-lists h3{
+font-size:1.25rem;
+margin-bottom:14px;
+color:#111827;
+}
+
+.service-lists ul{
+padding-left:20px;
+}
+
+.service-lists li{
+margin-bottom:10px;
+color:#475569;
+line-height:1.7;
 }
 
 /* CHAUFFEUR */
@@ -539,7 +578,7 @@ z-index:100000;
 @media(max-width:900px){
 
 .hero h1{
-font-size:3.2rem;
+font-size:2.85rem;
 }
 
 .section-title h2,
@@ -549,12 +588,14 @@ font-size:2.3rem;
 }
 
 .armenia-section,
-.chauffeur{
+.chauffeur,
+.split-section{
 grid-template-columns:1fr;
 }
 
 .armenia-section img,
-.chauffeur img{
+.chauffeur img,
+.split-section img{
 height:420px;
 }
 
@@ -591,11 +632,15 @@ padding:0 25px;
 }
 
 .hero h1{
-font-size:2.4rem;
+font-size:2.1rem;
 }
 
 .hero-buttons{
 justify-content:center;
+}
+
+.service-lists{
+grid-template-columns:1fr;
 }
 
 .tour-grid{
@@ -784,7 +829,7 @@ Discover the vibrant capital of Armenia.
 
 <div class="tour-card" onclick="openModal('gyumriModal')">
 
-<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_211100.png?v=1778778654">
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-julien-lambert-1869157-35654720.jpg?v=1779185060">
 
 <div class="tour-overlay"></div>
 
@@ -854,6 +899,108 @@ Discover Armenia’s sacred spiritual heritage.
 
 </section>
 
+<section id="services">
+
+<div class="container">
+
+<div class="split-section">
+
+<div class="info-box">
+
+<h2>Our Services</h2>
+
+<div class="service-lists">
+
+<div>
+
+<ul>
+<li>Airport Transfers</li>
+<li>Hotel Reservations</li>
+<li>VIP Transportation</li>
+<li>Private Drivers</li>
+<li>Private Tours</li>
+<li>Group Tours</li>
+<li>Restaurant Reservations</li>
+<li>Multilingual Guides</li>
+<li>Customized Travel Itineraries</li>
+<li>Cultural Experiences</li>
+<li>Luxury Travel Services</li>
+<li>Day Tours Across Armenia</li>
+</ul>
+
+</div>
+
+<div>
+
+<h3>Adventure Activities</h3>
+
+<ul>
+<li>Skiing</li>
+<li>Ropeway</li>
+<li>ATV</li>
+<li>Rafting</li>
+<li>Paragliding</li>
+<li>Zipline</li>
+<li>Hot air balloon</li>
+<li>Helicopter tours</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-samson-katt-5225278.jpg?v=1779186548">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="chauffeur">
+
+<div class="container">
+
+<div class="chauffeur">
+
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-453707837-15774577.jpg?v=1779025897">
+
+<div class="info-box">
+
+<h2>Chauffeur Service</h2>
+
+<p>
+Luxury • Comfort • Professionalism
+</p>
+
+<p>
+Travel across Armenia in complete comfort with our premium chauffeur service designed for tourists, business travelers, families, and VIP guests.
+</p>
+
+<ul>
+<li>Airport transfers</li>
+<li>Private city transportation</li>
+<li>Full-day and multi-day tours</li>
+<li>Business & VIP transportation</li>
+<li>Luxury travel experiences</li>
+<li>Comfortable long-distance journeys</li>
+</ul>
+
+<p>
+Professional drivers, modern vehicles,
+personalized routes, and comfortable travel experiences throughout Armenia.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <section>
 
 <div class="container">
@@ -907,72 +1054,6 @@ Armenia eVisa Official Website
 
 </section>
 
-<section id="services">
-
-<div class="container">
-
-<div class="chauffeur">
-
-<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-453707837-15774577.jpg?v=1779025897">
-
-<div class="info-box">
-
-<h2>Chauffeur Service</h2>
-
-<p>
-Luxury • Comfort • Professionalism
-</p>
-
-<p>
-Travel across Armenia in complete comfort with our premium chauffeur service designed for tourists, business travelers, families, and VIP guests.
-</p>
-
-<ul>
-<li>Airport transfers</li>
-<li>Private city transportation</li>
-<li>Full-day and multi-day tours</li>
-<li>Business & VIP transportation</li>
-<li>Luxury travel experiences</li>
-<li>Comfortable long-distance journeys</li>
-</ul>
-
-<p>
-Professional drivers, modern vehicles,
-personalized routes, and comfortable travel experiences throughout Armenia.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<div class="info-box">
-
-<h2>Why Choose Gohar Armenia Tours?</h2>
-
-<ul>
-<li>Multilingual professional guides</li>
-<li>Comfortable modern transportation</li>
-<li>Personalized service</li>
-<li>Carefully designed tour programs</li>
-<li>Warm Armenian hospitality</li>
-<li>Authentic local experiences</li>
-<li>Chauffeur Service</li>
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
 <section>
 
 <div class="container">
@@ -1001,6 +1082,36 @@ Discover Armenia
 </div>
 
 <img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-paul-5937660.jpg?v=1779100401">
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="split-section">
+
+<div class="info-box">
+
+<h2>Why Choose Gohar Armenia Tours?</h2>
+
+<ul>
+<li>Multilingual professional guides</li>
+<li>Comfortable modern transportation</li>
+<li>Personalized service</li>
+<li>Carefully designed tour programs</li>
+<li>Warm Armenian hospitality</li>
+<li>Authentic local experiences</li>
+<li>Chauffeur Service</li>
+</ul>
+
+</div>
+
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-david-geghamyan-28359865.jpg?v=1779187154">
 
 </div>
 
@@ -1206,7 +1317,7 @@ architecture, cafés, history and city life.
 <div class="modal-content">
 
 <img class="modal-image"
-src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_211100.png?v=1778778654">
+src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-julien-lambert-1869157-35654720.jpg?v=1779185060">
 
 <div class="modal-body">
 
