@@ -19,15 +19,15 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 font-family:'Poppins',sans-serif;
 background:#f8fafc;
 color:#111827;
 overflow-x:hidden;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 a{
@@ -49,8 +49,8 @@ margin:auto;
 
 header{
 position:fixed;
-width:100%;
 top:0;
+width:100%;
 z-index:999;
 background:rgba(0,0,0,0.25);
 backdrop-filter:blur(12px);
@@ -82,7 +82,6 @@ object-fit:cover;
 
 .nav-links{
 display:flex;
-align-items:center;
 gap:30px;
 }
 
@@ -117,42 +116,38 @@ object-fit:cover;
 .hero-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(
-to right,
-rgba(0,0,0,0.85),
-rgba(0,0,0,0.35)
-);
+background:linear-gradient(to right,rgba(0,0,0,0.85),rgba(0,0,0,0.3));
 }
 
 .hero-content{
 position:relative;
 z-index:2;
-color:white;
 max-width:760px;
 padding-left:7%;
+color:white;
 }
 
 .hero-small{
 display:inline-block;
-margin-bottom:20px;
-font-size:0.95rem;
+margin-bottom:18px;
 letter-spacing:2px;
 text-transform:uppercase;
+font-size:0.95rem;
 color:#dbeafe;
 }
 
 .hero h1{
 font-size:5rem;
 line-height:1.05;
-margin-bottom:28px;
+margin-bottom:26px;
 font-weight:800;
 }
 
 .hero p{
 font-size:1.15rem;
 line-height:1.8;
-color:#f1f5f9;
 margin-bottom:40px;
+color:#f1f5f9;
 }
 
 .hero-buttons{
@@ -180,7 +175,6 @@ border-radius:60px;
 border:1px solid rgba(255,255,255,0.4);
 color:white;
 font-weight:600;
-backdrop-filter:blur(10px);
 transition:0.3s;
 }
 
@@ -188,7 +182,7 @@ transition:0.3s;
 background:rgba(255,255,255,0.1);
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
 padding:110px 0;
@@ -205,9 +199,9 @@ margin-bottom:18px;
 }
 
 .section-title p{
-color:#64748b;
 max-width:760px;
 margin:auto;
+color:#64748b;
 line-height:1.8;
 }
 
@@ -247,11 +241,7 @@ transform:scale(1.08);
 .tour-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(
-to top,
-rgba(0,0,0,0.96),
-rgba(0,0,0,0.08)
-);
+background:linear-gradient(to top,rgba(0,0,0,0.96),rgba(0,0,0,0.08));
 }
 
 .tour-content{
@@ -259,61 +249,71 @@ position:absolute;
 bottom:0;
 left:0;
 width:100%;
-z-index:2;
 padding:34px;
 color:white;
-backdrop-filter:blur(2px);
+z-index:2;
 }
 
 .tour-subtitle{
 color:#dbeafe;
 margin-bottom:14px;
-font-size:0.92rem;
-letter-spacing:1px;
+font-size:0.9rem;
 }
 
 .tour-content h3{
 font-size:2rem;
-margin-bottom:16px;
+margin-bottom:14px;
 }
 
 .tour-content p{
-color:#f1f5f9;
 line-height:1.7;
-margin-bottom:18px;
+color:#f1f5f9;
 }
 
-/* INFO */
+/* INFO BOX */
 
-.contact-box{
+.info-box{
 background:white;
 border-radius:35px;
 padding:70px 40px;
-box-shadow:0 20px 60px rgba(0,0,0,0.07);
-max-width:1000px;
-margin:auto;
+box-shadow:0 20px 60px rgba(0,0,0,0.06);
+margin-bottom:50px;
 }
 
-.contact-box h3{
-font-size:2.2rem;
+.info-box h2{
+font-size:2.5rem;
+margin-bottom:24px;
+}
+
+.info-box p{
+line-height:1.9;
+color:#475569;
 margin-bottom:20px;
 }
 
-.contact-box p{
-color:#475569;
-margin-bottom:18px;
-line-height:1.9;
-}
-
-.info-list{
-margin-top:25px;
+.info-box ul{
 padding-left:20px;
 }
 
-.info-list li{
-margin-bottom:14px;
+.info-box li{
+margin-bottom:12px;
 color:#475569;
 line-height:1.8;
+}
+
+/* CHAUFFEUR */
+
+.chauffeur{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.chauffeur img{
+height:650px;
+object-fit:cover;
+border-radius:35px;
 }
 
 /* WHY ARMENIA */
@@ -326,9 +326,9 @@ align-items:center;
 }
 
 .armenia-section img{
-border-radius:35px;
 height:650px;
 object-fit:cover;
+border-radius:35px;
 }
 
 .armenia-text h2{
@@ -337,8 +337,8 @@ margin-bottom:25px;
 }
 
 .armenia-text p{
-color:#475569;
 line-height:1.9;
+color:#475569;
 margin-bottom:20px;
 }
 
@@ -357,33 +357,58 @@ transition:0.3s;
 transform:translateY(-4px);
 }
 
-/* SOCIALS */
+/* CONTACT */
 
-.social-icons{
-display:flex;
-gap:18px;
-margin-top:35px;
+.contact-section{
+background:#111827;
+color:white;
+border-radius:35px;
+padding:70px 40px;
+text-align:center;
 }
 
-.social-icons a{
-width:60px;
-height:60px;
+.contact-section h2{
+font-size:3rem;
+margin-bottom:25px;
+}
+
+.contact-section p{
+line-height:1.9;
+color:#cbd5e1;
+margin-bottom:20px;
+}
+
+.contact-links{
+display:flex;
+justify-content:center;
+gap:25px;
+margin-top:35px;
+flex-wrap:wrap;
+}
+
+.contact-links a{
+width:70px;
+height:70px;
 border-radius:50%;
-background:#f1f5f9;
+background:white;
 display:flex;
 align-items:center;
 justify-content:center;
 transition:0.3s;
 }
 
-.social-icons a:hover{
+.contact-links a:hover{
 transform:translateY(-5px);
-background:#e2e8f0;
 }
 
-.social-icons img{
-width:30px;
-height:30px;
+.contact-links img{
+width:35px;
+height:35px;
+}
+
+.mail-link{
+color:#93c5fd;
+font-weight:600;
 }
 
 /* FOOTER */
@@ -425,7 +450,7 @@ width:40px;
 .modal{
 position:fixed;
 inset:0;
-background:rgba(0,0,0,0.88);
+background:rgba(0,0,0,0.9);
 z-index:99999;
 overflow-y:auto;
 opacity:0;
@@ -460,7 +485,6 @@ opacity:1;
 }
 
 .modal-image{
-width:100%;
 height:500px;
 object-fit:cover;
 }
@@ -471,7 +495,7 @@ padding:50px;
 
 .modal-body h2{
 font-size:3rem;
-margin-bottom:25px;
+margin-bottom:24px;
 }
 
 .modal-body h3{
@@ -481,20 +505,19 @@ font-size:1.5rem;
 }
 
 .modal-body p{
-color:#475569;
 line-height:1.9;
+color:#475569;
 margin-bottom:18px;
 }
 
 .modal-body ul{
-padding-left:22px;
-margin-bottom:20px;
+padding-left:20px;
 }
 
 .modal-body li{
 margin-bottom:12px;
-color:#475569;
 line-height:1.8;
+color:#475569;
 }
 
 .close-modal{
@@ -503,17 +526,12 @@ top:25px;
 right:25px;
 width:60px;
 height:60px;
+border:none;
 border-radius:50%;
 background:white;
-border:none;
 font-size:2rem;
 cursor:pointer;
 z-index:100000;
-}
-
-.mail-link{
-color:#2563eb;
-font-weight:600;
 }
 
 /* MOBILE */
@@ -524,15 +542,19 @@ font-weight:600;
 font-size:3.2rem;
 }
 
-.section-title h2{
+.section-title h2,
+.contact-section h2,
+.armenia-text h2{
 font-size:2.3rem;
 }
 
-.armenia-section{
+.armenia-section,
+.chauffeur{
 grid-template-columns:1fr;
 }
 
-.armenia-section img{
+.armenia-section img,
+.chauffeur img{
 height:420px;
 }
 
@@ -554,7 +576,7 @@ gap:16px;
 }
 
 .nav-links{
-gap:18px;
+gap:16px;
 flex-wrap:wrap;
 justify-content:center;
 }
@@ -627,11 +649,8 @@ Gohar Armenia Tours
 <div class="nav-links">
 
 <a href="#tours">Tours</a>
+<a href="#services">Services</a>
 <a href="#contact">Contact</a>
-
-<a href="https://www.instagram.com/armenia.tours.gohar?igsh=NmMyNzhrdTNpMjBz" target="_blank">
-Instagram
-</a>
 
 </div>
 
@@ -650,7 +669,7 @@ Instagram
 <div class="hero-content">
 
 <span class="hero-small">
-WELCOME TO ARMENIA
+DISCOVER ARMENIA
 </span>
 
 <h1>
@@ -688,9 +707,9 @@ Explore Tours
 <h2>Popular Tours</h2>
 
 <p>
-Discover Armenia through unforgettable destinations,
-mountain landscapes, monasteries, culture,
-and authentic experiences.
+Explore Armenia through unforgettable destinations,
+ancient monasteries, mountain landscapes,
+culture, nature, and authentic experiences.
 </p>
 
 </div>
@@ -712,7 +731,7 @@ Mountains • Nature • Adventure
 <h3>Sevan • Tsaghkadzor</h3>
 
 <p>
-Lake views, ropeway rides, monasteries and breathtaking nature.
+Lake views, monasteries, ropeway rides and breathtaking nature.
 </p>
 
 </div>
@@ -834,6 +853,490 @@ Discover Armenia’s sacred spiritual heritage.
 </div>
 
 </section>
+
+<section>
+
+<div class="container">
+
+<div class="info-box">
+
+<h2>Important Note</h2>
+
+<p>
+The above-mentioned programs are our ready-made tour packages.
+</p>
+
+<p>
+We also create:
+</p>
+
+<ul>
+<li>Individual tours</li>
+<li>Luxury tours</li>
+<li>VIP experiences</li>
+<li>Honeymoon packages</li>
+<li>Family vacations</li>
+<li>Corporate trips</li>
+<li>Adventure tours</li>
+<li>Gastronomic experiences</li>
+<li>Business tours</li>
+</ul>
+
+<p>
+Every package can be customized according to your wishes,
+budget, and travel style.
+</p>
+
+<h2 style="margin-top:50px;">
+Visa Information
+</h2>
+
+<p>
+For Armenia visa information and e-visa application:
+</p>
+
+<p>
+<a class="mail-link" href="https://evisa.mfa.am" target="_blank">
+Armenia eVisa Official Website
+</a>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<div class="chauffeur">
+
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-453707837-15774577.jpg?v=1779025897">
+
+<div class="info-box">
+
+<h2>Chauffeur Service</h2>
+
+<p>
+Luxury • Comfort • Professionalism
+</p>
+
+<p>
+Travel across Armenia in complete comfort with our premium chauffeur service designed for tourists, business travelers, families, and VIP guests.
+</p>
+
+<ul>
+<li>Airport transfers</li>
+<li>Private city transportation</li>
+<li>Full-day and multi-day tours</li>
+<li>Business & VIP transportation</li>
+<li>Luxury travel experiences</li>
+<li>Comfortable long-distance journeys</li>
+</ul>
+
+<p>
+Professional drivers, modern vehicles,
+personalized routes, and comfortable travel experiences throughout Armenia.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="info-box">
+
+<h2>Why Choose Gohar Armenia Tours?</h2>
+
+<ul>
+<li>Multilingual professional guides</li>
+<li>Comfortable modern transportation</li>
+<li>Personalized service</li>
+<li>Carefully designed tour programs</li>
+<li>Warm Armenian hospitality</li>
+<li>Authentic local experiences</li>
+<li>Chauffeur Service</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="armenia-section">
+
+<div class="armenia-text">
+
+<h2>Why Visit Armenia</h2>
+
+<p>
+Armenia is one of the oldest countries in the world with a history dating back thousands of years.
+</p>
+
+<p>
+Discover breathtaking nature, ancient monasteries,
+mountain landscapes, rich culture,
+warm hospitality, cuisine, wine traditions,
+and unforgettable experiences.
+</p>
+
+<a href="javascript:void(0)" class="armenia-btn" onclick="openModal('armeniaModal')">
+Discover Armenia
+</a>
+
+</div>
+
+<img src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-paul-5937660.jpg?v=1779100401">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-section">
+
+<h2>Contact Us</h2>
+
+<p>
+Plan your unforgettable Armenian journey with us.
+</p>
+
+<p>
+Phone / WhatsApp / Telegram / Viber:
+<br>
++374 93 488858
+</p>
+
+<p>
+Email:
+<br>
+
+<a class="mail-link" href="mailto:gohararmeniatours@gmail.com">
+gohararmeniatours@gmail.com
+</a>
+
+</p>
+
+<div class="contact-links">
+
+<a href="https://wa.me/37493488858" target="_blank">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+</a>
+
+<a href="viber://chat?number=%2B37493488858">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3670/3670059.png">
+
+</a>
+
+<a href="https://t.me/+37493488858">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+
+</a>
+
+<a href="https://www.instagram.com/armenia.tours.gohar?igsh=NmMyNzhrdTNpMjBz" target="_blank">
+
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Gohar Armenia Tours — All Rights Reserved
+
+</footer>
+
+<a class="whatsapp-float"
+href="https://wa.me/37493488858"
+target="_blank">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+</a>
+
+<!-- MODALS -->
+
+<div class="modal" id="sevanModal">
+
+<button class="close-modal" onclick="closeModal('sevanModal')">×</button>
+
+<div class="modal-content">
+
+<img class="modal-image"
+src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-79380313-9739331.jpg?v=1779098600">
+
+<div class="modal-body">
+
+<h2>Sevan • Tsaghkadzor Tour</h2>
+
+<p>
+Experience the beauty of Armenian nature,
+mountain landscapes, and medieval heritage during this unforgettable full-day tour.
+</p>
+
+<h3>Lake Sevan</h3>
+
+<p>
+One of the largest high-altitude freshwater lakes in the world,
+famous for crystal-clear waters and breathtaking scenery.
+</p>
+
+<h3>Sevanavank Monastery</h3>
+
+<p>
+Built in 874 with panoramic views over Lake Sevan.
+</p>
+
+<h3>Tsaghkadzor</h3>
+
+<p>
+Armenia’s famous mountain resort town with ropeway rides,
+nature and adventure experiences.
+</p>
+
+<h3>Kecharis Monastery</h3>
+
+<p>
+Beautiful medieval monastery surrounded by forests and mountains.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modal" id="dilijanModal">
+
+<button class="close-modal" onclick="closeModal('dilijanModal')">×</button>
+
+<div class="modal-content">
+
+<img class="modal-image"
+src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-arzu-ibaeva-479643718-16976814.jpg?v=1779098811">
+
+<div class="modal-body">
+
+<h2>Dilijan Tour</h2>
+
+<p>
+Discover the green paradise of Dilijan,
+often called the Armenian Switzerland.
+</p>
+
+<ul>
+<li>Haghartsin Monastery</li>
+<li>Goshavank Monastery</li>
+<li>Forest landscapes</li>
+<li>Peaceful atmosphere</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modal" id="yerevanModal">
+
+<button class="close-modal" onclick="closeModal('yerevanModal')">×</button>
+
+<div class="modal-content">
+
+<img class="modal-image"
+src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/yerevan.jpg?v=1779023808">
+
+<div class="modal-body">
+
+<h2>Yerevan City Tour</h2>
+
+<p>
+Discover the vibrant capital of Armenia filled with culture,
+architecture, cafés, history and city life.
+</p>
+
+<ul>
+<li>Republic Square</li>
+<li>Cascade Complex</li>
+<li>Opera House</li>
+<li>Northern Avenue</li>
+<li>Swan Lake</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modal" id="gyumriModal">
+
+<button class="close-modal" onclick="closeModal('gyumriModal')">×</button>
+
+<div class="modal-content">
+
+<img class="modal-image"
+src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/Screenshot_2026-05-14_211100.png?v=1778778654">
+
+<div class="modal-body">
+
+<h2>Gyumri Tour</h2>
+
+<p>
+Discover the artistic and cultural capital of Armenia.
+</p>
+
+<ul>
+<li>Black Fortress</li>
+<li>Historic District</li>
+<li>Traditional architecture</li>
+<li>Authentic Armenian culture</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modal" id="garniModal">
+
+<button class="close-modal" onclick="closeModal('garniModal')">×</button>
+
+<div class="modal-content">
+
+<img class="modal-image"
+src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-vladimir-konoplev-155326297-11885398.jpg?v=1779099692">
+
+<div class="modal-body">
+
+<h2>Garni • Geghard Tour</h2>
+
+<p>
+Discover Armenia’s ancient history and natural wonders.
+</p>
+
+<ul>
+<li>Garni Temple</li>
+<li>Geghard Monastery</li>
+<li>Symphony of Stones</li>
+<li>Azat Gorge</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modal" id="spiritualModal">
+
+<button class="close-modal" onclick="closeModal('spiritualModal')">×</button>
+
+<div class="modal-content">
+
+<img class="modal-image"
+src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-ash-haghighi-351057514-18500065.jpg?v=1779100029">
+
+<div class="modal-body">
+
+<h2>Spiritual Armenia Tour</h2>
+
+<p>
+Step into the spiritual soul of Armenia through ancient monasteries and sacred heritage.
+</p>
+
+<ul>
+<li>Khor Virap</li>
+<li>Noravank</li>
+<li>Tatev Monastery</li>
+<li>Wings of Tatev</li>
+<li>Etchmiadzin Cathedral</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="modal" id="armeniaModal">
+
+<button class="close-modal" onclick="closeModal('armeniaModal')">×</button>
+
+<div class="modal-content">
+
+<img class="modal-image"
+src="https://cdn.shopify.com/s/files/1/0750/1516/0000/files/pexels-melek-36305192.jpg?v=1779100719">
+
+<div class="modal-body">
+
+<h2>Why Visit Armenia</h2>
+
+<p>
+Armenia is filled with ancient traditions,
+mountain landscapes, monasteries,
+warm hospitality, unique cuisine,
+wine traditions and unforgettable experiences.
+</p>
+
+<ul>
+<li>Breathtaking nature</li>
+<li>Rich Armenian culture</li>
+<li>Traditional Armenian cuisine</li>
+<li>Ancient monasteries</li>
+<li>Authentic local experiences</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openModal(id){
+document.getElementById(id).classList.add('active');
+document.body.style.overflow='hidden';
+}
+
+function closeModal(id){
+document.getElementById(id).classList.remove('active');
+document.body.style.overflow='auto';
+}
+
+</script>
 
 </body>
 </html>
